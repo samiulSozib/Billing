@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "758160922383",
+    "firebase_url": "https://betting-tip-sports-prediction1.firebaseio.com",
+    "project_id": "betting-tip-sports-prediction1",
+    "storage_bucket": "betting-tip-sports-prediction1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:758160922383:android:533b468c160c36a9b5107a",
+        "android_client_info": {
+          "package_name": "com.sportsprediction.bettingtipssportsprediction1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "758160922383-92tpn7s8i2vl24csgp8m3re9in77htp8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sportsprediction.bettingtipssportsprediction1",
+            "certificate_hash": "054b55930944fd55c74d21276791b24b3199222d"
+          }
+        },
+        {
+          "client_id": "758160922383-gmltjpu7cqvb6bl9b91n4vtt2o1li7pi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFS31Zf5jARxuj3TfgXYrutnBKje9kZOU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "758160922383-gmltjpu7cqvb6bl9b91n4vtt2o1li7pi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

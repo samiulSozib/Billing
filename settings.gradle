@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name='Betting Tips Sports Prediction1'

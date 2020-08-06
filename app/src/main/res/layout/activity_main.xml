@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0072bc"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/newlogo"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#ffffff"/>
+
+        <Button
+            android:onClick="free_tips"
+            android:text="Free Tips"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:drawableRight="@drawable/free"
+            android:drawableLeft="@drawable/free"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:onClick="vip_tips"
+            android:text="VIP Tips"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:drawableLeft="@drawable/vip"
+            android:drawableRight="@drawable/vip"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
