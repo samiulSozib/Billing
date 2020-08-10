@@ -9,50 +9,77 @@
     android:gravity="center"
     tools:context=".MainActivity">
 
-
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profile_image"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/newlogo"
-            app:civ_border_width="2dp"
-            app:civ_border_color="#ffffff"/>
-
-        <Button
-            android:onClick="free_tips"
-            android:text="Free Tips"
-            android:textAllCaps="false"
-            android:textSize="18sp"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:drawableRight="@drawable/free"
-            android:drawableLeft="@drawable/free"
-            android:layout_marginBottom="15dp"
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="0dp">
 
-        <Button
-            android:onClick="vip_tips"
-            android:text="VIP Tips"
-            android:textAllCaps="false"
-            android:textSize="18sp"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:drawableLeft="@drawable/vip"
-            android:drawableRight="@drawable/vip"
-            android:layout_marginBottom="15dp"
+                <TextView
+                    android:text="Betting Tips Sports Prediction"
+                    android:textSize="22sp"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="3"
+            android:gravity="bottom|center"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="0dp">
 
 
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/newlogo"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#ffffff"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="6"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
 
 
+                <Button
+                    android:onClick="free_tips"
+                    android:text="Free Tips"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:drawableRight="@drawable/free"
+                    android:drawableLeft="@drawable/free"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"/>
 
+                <Button
+                    android:onClick="vip_tips"
+                    android:text="VIP Tips"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/vip"
+                    android:drawableRight="@drawable/vip"
+                    android:layout_marginBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"/>
 
-
-
-
+        </LinearLayout>
 
 
 </LinearLayout>

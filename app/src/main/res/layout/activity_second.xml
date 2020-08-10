@@ -3,11 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#0072BC"
-    android:layout_height="match_parent"
-    tools:context=".FirstActivity">
-
+    tools:context=".SecondActivity">
 
     <LinearLayout
         android:layout_weight="10"
@@ -16,7 +15,7 @@
         android:layout_height="0dp">
 
         <TextView
-            android:text="(Premium) One Month"
+            android:text="(Premium) Three Month"
             android:textStyle="bold"
             android:background="#055589"
             android:textSize="22sp"
@@ -65,6 +64,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
 
 </LinearLayout>

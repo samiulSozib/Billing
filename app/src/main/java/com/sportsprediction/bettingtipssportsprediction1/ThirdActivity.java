@@ -3,16 +3,12 @@ package com.sportsprediction.bettingtipssportsprediction1;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,7 +18,9 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Free_Tips extends AppCompatActivity {
+import butterknife.ButterKnife;
+
+public class ThirdActivity extends AppCompatActivity {
 
     private ListView listView;
     DatabaseReference databaseReference,databaseReference1,databaseReference2;
@@ -30,48 +28,25 @@ public class Free_Tips extends AppCompatActivity {
     TodayAdapter todayAdapter;
     TextView dateText,textView;
 
-    private InterstitialAd interstitial;
+    public static void open(Activity activity, String text) {
+        Intent intent = new Intent(activity, FirstActivity.class);
+        intent.putExtra("text", text);
+        activity.startActivity(intent);
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_free__tips);
+        setContentView(R.layout.activity_third);
+        ButterKnife.bind(this);
 
-
-        ////
-
-        AdView adView=findViewById(R.id.adView);
-        AdRequest adRequest=new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
-
-
-        ////
-
-        ////
-
-        MobileAds.initialize(this,"ca-app-pub-3940256099942544~3347511713");  // app publisher id
-        AdRequest adRequest1=new AdRequest.Builder().build();
-
-        interstitial=new InterstitialAd(Free_Tips.this);
-        interstitial.setAdUnitId("ca-app-pub-3940256099942544/1033173712");//// interstisial add id
-        interstitial.loadAd(adRequest1);
-
-        interstitial.setAdListener(new AdListener(){
-
-            public void onAdLoaded(){
-                displayInterstitial();
-            }
-
-        });
-
-        ////
-
-        databaseReference= FirebaseDatabase.getInstance().getReference("Free_Tips");
-        databaseReference1=FirebaseDatabase.getInstance().getReference("Free_Tips_Date");
-        databaseReference2=FirebaseDatabase.getInstance().getReference("Ad_in_free_tips");
+        databaseReference= FirebaseDatabase.getInstance().getReference("Vip_Tips");
+        databaseReference1=FirebaseDatabase.getInstance().getReference("Vip_Tips_Date");
+        databaseReference2=FirebaseDatabase.getInstance().getReference("Ad_in_vip_tips");
         today_list=new ArrayList<>();
 
-        todayAdapter=new TodayAdapter(Free_Tips.this,today_list);
+        todayAdapter=new TodayAdapter(ThirdActivity.this,today_list);
 
 
 
@@ -112,15 +87,6 @@ public class Free_Tips extends AppCompatActivity {
 
             }
         });
-
-    }
-
-    private void displayInterstitial() {
-
-            if (interstitial.isLoaded()) {
-                interstitial.show();
-            }
-
     }
 
     public void onStart() {
@@ -149,6 +115,7 @@ public class Free_Tips extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(getApplicationContext(),MainActivity.class));finish();
+        startActivity(new Intent(getApplicationContext(),Vip_Tips.class));
+        finish();
     }
 }

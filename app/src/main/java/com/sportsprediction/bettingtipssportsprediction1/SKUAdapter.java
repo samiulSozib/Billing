@@ -44,9 +44,16 @@ public class SKUAdapter extends RecyclerView.Adapter<SKUAdapter.SKUVIEWHOLDER> {
     @Override
     public void onBindViewHolder(@NonNull SKUAdapter.SKUVIEWHOLDER holder, final int position) {
 
-        holder.tv_title.setText(arrayList.get(position).getTitle().trim());
+        holder.tv_title.setText(arrayList.get(position).getDescription().trim());
         holder.tv_details.setText(arrayList.get(position).getPrice());
         holder.bt_buty_now.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //SKUAdapter.this.buySKU.onBuySKU(true,arrayList.get(position));
+            }
+        });
+
+        holder.tv_title.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SKUAdapter.this.buySKU.onBuySKU(true,arrayList.get(position));

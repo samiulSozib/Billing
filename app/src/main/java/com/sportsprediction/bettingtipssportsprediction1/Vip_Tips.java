@@ -63,7 +63,7 @@ public class Vip_Tips extends AppCompatActivity implements PurchasesUpdatedListe
             public void onBillingSetupFinished(BillingResult billingResult) {
                 if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) {
                     // The BillingClient is ready. You can query purchases here.
-                    Toast.makeText(Vip_Tips.this, "Billing connected", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(Vip_Tips.this, "Billing connected", Toast.LENGTH_SHORT).show();
                     skufetch();
                 }
             }
@@ -82,11 +82,11 @@ public class Vip_Tips extends AppCompatActivity implements PurchasesUpdatedListe
     private void skufetch() {
         List<String> skuList = new ArrayList<>();
         skuList.add("one_month_pay");
-        skuList.add("second_packages");
-        skuList.add("third_packages");
+        skuList.add("three_month_pay");
+        skuList.add("sixm_month_pay");
 
         SkuDetailsParams.Builder params = SkuDetailsParams.newBuilder();
-        params.setSkusList(skuList).setType(BillingClient.SkuType.INAPP);
+        params.setSkusList(skuList).setType(BillingClient.SkuType.SUBS);
         billingClient.querySkuDetailsAsync(params.build(),
                 new SkuDetailsResponseListener() {
                     @Override
@@ -222,11 +222,11 @@ public class Vip_Tips extends AppCompatActivity implements PurchasesUpdatedListe
                 FirstActivity.open(this, "Welcome 120TK all premium page");
 
                 break;
-            case "second_packages":
-                //SecondActivity.open(this, "Welcome 100TK single game page");
+            case "three_month_pay":
+                SecondActivity.open(this, "Welcome 100TK single game page");
                 break;
-            case "third_packages":
-                //FirstActivity.open(this, "Welcome 120TK all premium page");
+            case "sixm_month_pay":
+                ThirdActivity.open(this, "Welcome 120TK all premium page");
                 //SecondActivity.open(this, "Welcome 100TK single game page");
                 break;
             default:
